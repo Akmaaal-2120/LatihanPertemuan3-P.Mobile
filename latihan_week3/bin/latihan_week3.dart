@@ -21,3 +21,17 @@ void hitungBMI(double tinggiCm, double beratKg, List<Map<String, dynamic>> riway
   kategori = "Obesitas"; } // Simpan hasil ke riwayat 
   riwayat.add({ 'tinggi': tinggiCm, 'berat': beratKg, 'bmi': bmi, 'kategori': kategori });
 }
+
+// Fungsi tambahan untuk menampilkan riwayat (menggunakan perulangan)
+void tampilkanRiwayat(List<Map<String, dynamic>> riwayat) {
+  print("=== RIWAYAT PERHITUNGAN BMI ===");
+  
+  for (var i = 0; i < riwayat.length; i++) {
+    var item = riwayat[i];
+    print("Data ke-${i + 1}:");
+    print("Tinggi: ${item['tinggi']}cm | Berat: ${item['berat']}kg");
+    // .toStringAsFixed(1) agar angka di belakang koma tidak terlalu panjang
+    print("BMI: ${item['bmi'].toStringAsFixed(1)} (${item['kategori']})");
+    print("-" * 30);
+  }
+}
