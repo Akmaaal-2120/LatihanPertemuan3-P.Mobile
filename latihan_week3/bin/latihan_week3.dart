@@ -1,0 +1,13 @@
+// main.dart
+void main() { 
+  List> riwayat = []; // Simulasi beberapa input hitungBMI(170, 65, riwayat);
+  hitungBMI(165, 75, riwayat); 
+  hitungBMI(180, 85, riwayat); // Tampilkan riwayat menggunakan perulangan
+  tampilkanRiwayat(riwayat);
+}
+
+void hitungBMI(double tinggiCm, double beratKg, List> riwayat) { // Konversitinggi dari cm ke m 
+  double tinggiM = tinggiCm / 100; // Hitung BMI 
+  double bmi = beratKg / (tinggiM *tinggiM); // Tentukan kategori menggunakan percabangan 
+  String kategori; 
+}
